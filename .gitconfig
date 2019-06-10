@@ -3,12 +3,4 @@
 [color]
 	ui = true
 [alias]
-	lol = log --graph --pretty=format:'%C(auto)%h -%d %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit -n 25
-	lg = log --oneline -n 10
-	llg = log --oneline -n 10 --branches --not --remotes
-	#lol = log --oneline --graph --all --decorate -n 25
-
-	ignore = update-index --skip-worktree
-	uignore = update-index --no-skip-worktree
-	lignore = ls-files -v . | grep ^S
-	s = status -s
+	lol = log --graph --pretty=format:'%C(auto)%h -%d %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' -n 25
