@@ -1,23 +1,28 @@
 # Repos
 alias gitstar='cd c:Development/Frontend/CometUI/'
 alias gmain='cd c:Sources_Git/C70/'
+alias autopi='cd c:Development/autopi/'
 
-# Ignore
+
+alias g='git'
+
+# Status
+alias gs='g status -s -u -b'
+
+# Ignore / unignore
 alias gignore='git update-index --skip-worktree'
 alias guignore='git update-index --no-skip-worktree'
 alias glignore='git ls-files -v . | grep ^S'
-#alias ignoreAll='git ls-files | grep -i '**\NLog.config' | xargs bash -cil 'ignore "$@"' arg0'
+## Ignore all files matching ..
+## alias ignoreAll='git ls-files | grep -i '**\NLog.config' | xargs bash -cil 'ignore "$@"' arg0'
 
+# Get git aliases
 alias galias='git config --get-regexp alias'
-
-
-# Git
-alias g='git'
-alias gs='g status -s -u -b'
 
 # Log
 alias glg='log --oneline -n 10'
 alias glg='log --oneline -n 10 --branches --not --remotes'
+## Get logs in graph-format
 alias glol='git lol'
 
 # other
