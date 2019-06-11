@@ -26,7 +26,7 @@ alias glg='log --oneline -n 10 --branches --not --remotes'
 alias glol='git lol'
 
 # other
-alias helpme='cat /c/June/Git/githelp.txt'
+alias helpme='cat /c/Git/githelp.txt'
 alias bashrc='notepad ~/.bashrc'
 alias gitglobal='git config --global --edit'
 

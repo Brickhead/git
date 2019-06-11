@@ -1,0 +1,47 @@
+## Diff ##
+if you want to see what you haven't git added yet:
+	* git diff myfile.txt
+or if you want to see already added changes
+	* git diff --cached myfile.txt
+
+
+## Logging ##
+What will be pushed
+	*git log origin/master..master
+or, more generally:
+	*git log <since>..<until>
+You can use this with grep to check for a specific, known commit:
+	*git log <since>..<until> | grep <commit-hash>
+Or you can also use git-rev-list to search for a specific commit:
+	*git rev-list origin/master | grep <commit-hash> 
+
+
+## Push ##
+Push specific commit
+	* git push <remotename> <commit SHA>:<remotebranchname>
+
+## Revert ## 
+git fetch downloads the latest from remote without trying to merge or rebase anything.
+Then the git reset resets the master branch to what you just fetched. The --hard option changes all the files in your working tree to match the files in origin/master.
+	*git fetch --all
+	*git reset --hard origin/master
+Revert commit, keep changes
+	*git reset HEAD^
+
+
+## Ignore ##
+Ignore file
+	*git update-index --skip-worktree <file>
+Unignore file
+	*git update-index --no-skip-worktree <file>
+Show ignored
+	*git ls-files -v . | grep ^S
+
+
+## Branching ##
+Move everything to branch and reset master
+	git stash
+	git checkout -b edge master
+	git branch -f master SHA1_before_your_commits
+	git stash apply
+
