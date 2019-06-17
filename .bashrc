@@ -1,32 +1,28 @@
 # Repos
 alias gitstar='cd c:Development/Frontend/CometUI/'
 alias gmain='cd c:Sources_Git/C70/'
-alias autopi='cd c:Development/autopi/'
+alias ggit='cd c:git/'
 
-
-alias g='git'
-
-# Status
-alias gs='g status -s -u -b'
-
-# Ignore / unignore
+# Ignore
 alias gignore='git update-index --skip-worktree'
 alias guignore='git update-index --no-skip-worktree'
 alias glignore='git ls-files -v . | grep ^S'
-## Ignore all files matching ..
-## alias ignoreAll='git ls-files | grep -i '**\NLog.config' | xargs bash -cil 'ignore "$@"' arg0'
+#alias ignoreAll='git ls-files | grep -i '**\NLog.config' | xargs bash -cil 'ignore "$@"' arg0'
 
-# Get git aliases
 alias galias='git config --get-regexp alias'
 
+
+# Git
+alias g='git'
+alias gs='g status -s -u -b'
+
 # Log
-alias glg='log --oneline -n 10'
-alias glg='log --oneline -n 10 --branches --not --remotes'
-## Get logs in graph-format
-alias glol='git lol'
+alias glg='git log --oneline -n 10'
+alias glgg='git log --oneline -n 10 --branches --not --remotes'
+alias glol='git lol' # we have the command lol in .gitconfig instead to get prettier colours.
 
 # other
-alias helpme='cat /c/Git/githelp.txt'
+alias helpme='cat /c/Git/gitHelp.txt'
 alias bashrc='notepad ~/.bashrc'
 alias gitglobal='git config --global --edit'
 
