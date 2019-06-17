@@ -18,7 +18,7 @@ Or you can also use git-rev-list to search for a specific commit:
 
 ## Push ##
 Push specific commit
-	* git push <remotename> <commit SHA>:<remotebranchname>
+	*git push <remotename> <commit SHA>:<remotebranchname>
 
 ## Revert ## 
 git fetch downloads the latest from remote without trying to merge or rebase anything.
@@ -27,6 +27,14 @@ Then the git reset resets the master branch to what you just fetched. The --hard
 	*git reset --hard origin/master
 Revert commit, keep changes
 	*git reset HEAD^
+
+## Remove added file from last commit ##
+	*git reset --soft HEAD^ 
+Then reset the unwanted files in order to leave them out from the commit:
+	*git reset HEAD path/to/unwanted_file
+Now commit again, you can even re-use the same commit message:
+	*git commit -c ORIG_HEAD  
+
 
 
 ## Ignore ##
