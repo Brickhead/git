@@ -20,6 +20,7 @@ alias gs='g status -s -u -b'
 alias glg='git log --oneline -n 10'
 alias glgg='git log --oneline -n 10 --branches --not --remotes'
 alias glol='git lol' # we have the command lol in .gitconfig instead to get prettier colours.
+alias gc='git cherry -v'
 
 # other
 alias helpme='cat /c/Git/gitHelp.txt'
