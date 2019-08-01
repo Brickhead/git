@@ -26,6 +26,8 @@ alias gc='git cherry -v'
 alias glo='git branch | grep \* | cut -d " " -f2 | xargs bash -cil '"'"'glg $0 ^origin/master'"'"''
 # Find changes in current branch vs master
 alias glm='git branch | grep \* | cut -d " " -f2 | xargs bash -cil '"'"'glg $0 ^master'"'"''
+# Find changes in master but not in branch
+alias glb='git branch | grep \* | cut -d " " -f2 | xargs bash -cil '"'"'glg master ^$0'"'"''
 
 # other
 alias helpme='cat /c/Git/gitHelp.txt'
