@@ -40,6 +40,23 @@ Now commit again, you can even re-use the same commit message:
 	*git commit -c ORIG_HEAD  
 
 
+## Commit part of a file:
+You can use git add --patch <filename> (or -p for short), and git will begin to break down your file into what it thinks are sensible "hunks" (portions of the file). It will then prompt you with this question:
+    Stage this hunk [y,n,q,a,d,/,j,J,g,s,e,?]?
+        y stage this hunk for the next commit
+        n do not stage this hunk for the next commit
+        q quit; do not stage this hunk or any of the remaining hunks
+        a stage this hunk and all later hunks in the file
+        d do not stage this hunk or any of the later hunks in the file
+        g select a hunk to go to
+        / search for a hunk matching the given regex
+        j leave this hunk undecided, see next undecided hunk
+        J leave this hunk undecided, see next hunk
+        k leave this hunk undecided, see previous undecided hunk
+        K leave this hunk undecided, see previous hunk
+        s split the current hunk into smaller hunks
+        e manually edit the current hunk
+        ? print hunk help
 
 ### Ignore ### 
 Ignore file
