@@ -39,6 +39,10 @@ Then reset the unwanted files in order to leave them out from the commit:
 Now commit again, you can even re-use the same commit message:
 	*git commit -c ORIG_HEAD  
 
+-- New in 2.23 --
+Revert main.c from --source (HEAD~3 = 3 commits ago) into staged (added files / index) and into worktree (workingcopy)
+	*git restore --source HEAD~3 --staged --worktree main.c
+
 
 ## Commit part of a file:
 You can use git add --patch <filename> (or -p for short), and git will begin to break down your file into what it thinks are sensible "hunks" (portions of the file). It will then prompt you with this question:
@@ -69,8 +73,12 @@ Show ignored
 
 ### Branching ### 
 Move everything to branch and reset master
-	git stash
-	git checkout -b <branch> master
-	git branch -f master <SHA1_before_your_commits>
-	git stash apply
+	*git stash
+	*git checkout -b <branch> master
+	*git branch -f master <SHA1_before_your_commits>
+	*git stash apply
+-- New in 2.23 --
+Create new branch
+	*git switch -c my-new-feature
+
 
